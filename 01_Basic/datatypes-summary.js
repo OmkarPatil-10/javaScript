@@ -33,3 +33,41 @@ let myFunction = function(){                    //function [function Object]
 
 
 console.log(typeof bigNumber);
+
+
+
+
+
+
+
+
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack (Primitive), Heap (Non-Primitive)
+
+
+// 1. Stack (Primitive)
+let myUserName = "OmkarPatil-10"
+
+let anotherName = myUserName
+anotherName = "Omkar10"
+
+console.log(anotherName);
+console.log(myUserName);
+
+
+// 2. Heap (Non-Primitive)
+
+let userOne ={
+    email: "example@gmail.com",
+    id: 1234, 
+}
+
+let userTwo = userOne
+
+userTwo.email = "sample@gmail.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
