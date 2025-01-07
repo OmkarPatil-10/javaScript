@@ -17,7 +17,7 @@ const myArr2 = new Array(9, 8, 7, 6)        // ->> new way of declaring array
 // myArr.shift()       // ->> "remove" the element from the "beginning" of array
 
 // console.log(myArr.includes(5));  // true ->> shows the element is present or not 
-// console.log(myArr.indexOf(7));  // -1 
+// console.log(myArr.indexOf(7));  // -1 ->> shows the specified elemnt index 
 
 // const newArr = myArr.join()     // ->> convert the array into the string
 
