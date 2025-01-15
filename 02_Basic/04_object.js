@@ -50,11 +50,49 @@ const users = [
     },
 ]
 users[1].email
-console.log(discordUser);
+// console.log(discordUser);
 
-console.log(Object.keys(discordUser));
-console.log(Object.values(discordUser));
-console.log(Object.entries(discordUser));
+// console.log(Object.keys(discordUser));
+// console.log(Object.values(discordUser));
+// console.log(Object.entries(discordUser));
 
-console.log(discordUser.hasOwnProperty('isLoggedIn'));  // true
-console.log(discordUser.hasOwnProperty('score'));  // false
+// console.log(discordUser.hasOwnProperty('isLoggedIn'));  // true
+// console.log(discordUser.hasOwnProperty('score'));  // false
+
+
+//++++ Destructuring ++++
+ 
+const course = {
+    courseName : "JavaScript Full Course",
+    price: "9999",
+    courseInstructor: "Omkar"
+}
+
+// course.courseInstructor
+
+const {courseInstructor: instructor} = course       // <-- destructuring
+
+// console.log(courseInstructor); 
+console.log(instructor);
+
+
+// ++++ JSON ++++ [API]
+
+// {
+//     "name": "omkar",
+//     "city": "mumbai",
+//     "country": "india"
+// }
+
+
+// in array format
+[
+    {},
+    {},
+    {}
+]
+
+
+
+
+
