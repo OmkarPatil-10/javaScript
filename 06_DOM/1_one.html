@@ -4,13 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .bg-black{
+            background-color: black;
+            color: white;
+        }
+    </style>
 </head>
-<body>
-    <div class="bg-black">
-        <h1 class="heading">DOM Learning </h1>
-        <p class="paragraph" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet possimus totam, dolorem quasi sunt voluptatibus perferendis illum cumque ipsum harum temporibus ipsam placeat quia illo praesentium maxime vitae? Voluptate, facilis.</p>
+<body class="bg-black">
+    <div >
+        <h1 id="title" class="heading">DOM Learning with <span style="display:none;" >testing test</span> Omkar Patil </h1>
+        <p class="paragraph" >Lorem ipsum dolor sit amet </p>
     </div>
     
 </body>
 </html>
 
+
+
+<!-- try this on browser console -->
+
+<!-- document.getElementById('title') 
+     -> document.getElementById('title').id    
+     -> document.getElementById('title').class    
+     -> document.getElementById('title').className
+
+     -> document.getElementById('title').getAttribute('id')
+     -> document.getElementById('title').setAttribute('class','heading2')
+-->
+
+<!-- 
+    -> title.style.background = "green"
+    -> title.style.padding = "15px"
+    -> title.style.borderRadius = "15px"
+-->
+
+<!-- 
+    -> title.innerText   // get only the content present on webpage
+    -> title.textContent   // get every content of that element 
+    -> title.innerHTML   // give content with inner html
+-->
