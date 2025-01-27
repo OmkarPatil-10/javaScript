@@ -14,7 +14,17 @@
 <body class="bg-black">
     <div >
         <h1 id="title" class="heading">DOM Learning with <span style="display:none;" >testing test</span> Omkar Patil </h1>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
         <p class="paragraph" >Lorem ipsum dolor sit amet </p>
+        <input type="password" name="" id="">
+        <ul>
+            <li class="list-items">one</li>
+            <li class="list-items">two</li>
+            <li class="list-items">three</li>
+            <li class="list-items">four</li>
+        </ul>
     </div>
     
 </body>
@@ -24,7 +34,8 @@
 
 <!-- try this on browser console -->
 
-<!-- document.getElementById('title') 
+<!-- // get Element
+     -> document.getElementById('title') 
      -> document.getElementById('title').id    
      -> document.getElementById('title').class    
      -> document.getElementById('title').className
@@ -33,14 +44,81 @@
      -> document.getElementById('title').setAttribute('class','heading2')
 -->
 
-<!-- 
+<!-- //styling
     -> title.style.background = "green"
     -> title.style.padding = "15px"
     -> title.style.borderRadius = "15px"
 -->
 
-<!-- 
+<!-- // element content
     -> title.innerText   // get only the content present on webpage
     -> title.textContent   // get every content of that element 
     -> title.innerHTML   // give content with inner html
 -->
+
+<!-- // html collection 
+    -> document.getElementsByClassName('heading')
+
+-->
+
+<!--  // Query Selector
+    1. querySelector
+        -> document.querySelector('h1')  // give particular element or byDefault it will first element i.e = first h1 tag
+        -> document.querySelector('#title') // for "id" "#"
+        -> document.querySelector('.heading') // for "class" "."
+
+    2. querySelectorAll
+        -> document.querySelectorAll('h2')  // give all h2 element 
+
+        -> document.querySelectorAll('li')
+        -> const tempLiList = document.querySelectorAll('li')
+        -> tempLiList[0].style.color = "green"
+        -> const myH1 = document.querySelectorAll('h1')
+        -> myH1[0].style.color = "orange"
+        -> tempLiList.forEach( function (l) {
+                 l.style.backgroundColor = "orange"
+            })
+        
+        
+ -->
+
+
+ <!-- // Unordered List [ul] query selection 
+        -> document.querySelector('ul')
+
+      // manipulating ul element
+        -> const myUL = document.querySelector('ul')
+        -> myUL.querySelector('li')
+        -> const turnYellow = myUL.querySelector('li')
+        -> turnYellow.style.backgroundColor = "yellow"
+        -> turnYellow.style.color = "black"
+
+ -->
+
+
+ <!-- // get element by className  -> in classname there is HTMLCollection so no foreach()
+        -> document.getElementsByClassName('.list-items')
+        -> const tempClassList =  document.getElementsByClassName('.list-items')
+        -> Array.from(tempClassList)   // converting HTMLCollection into array
+        -> const tempClassList =  document.getElementsByClassName('list-items')
+        -> const myConvertdArray = Array.from(tempClassList)
+        -> myConvertdArray.forEach( function (l) {
+                l.style.color = 'orange'
+            })
+ -->
+
+
+ <!-- // on javaScript wikipedia
+        -> document.querySelectorAll('h2')
+        -> const tempH2 = document.querySelectorAll('h2')
+        -> tempH2.forEach( (h2) => {
+            h2.style.color = "red"
+            })
+        -> tempH2.forEach( (h2) => {
+                h2.style.color = "red";
+                h2.style.backgroundColor = "yellow";
+                h2.style.padding = "15px";
+                h2.innerText = "Omkar Patil"
+            })
+
+ -->
