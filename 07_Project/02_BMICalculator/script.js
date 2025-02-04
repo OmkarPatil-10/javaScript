@@ -23,9 +23,9 @@ form.addEventListener('submit', function (e) {
 
     // BMI 
     if( bmi < 18.6){
-      bmiResults.innerHTML = "Under Weight"
+      bmiResults.innerHTML = "Under Weight";
     } else if ( bmi > 24.9){
-      bmiResults.innerHTML =" Over Weight"
+      bmiResults.innerHTML =" Over Weight";
     } else {
       bmiResults.innerHTML = "Normal Range"
     }
