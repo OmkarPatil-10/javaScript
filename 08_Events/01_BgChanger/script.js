@@ -20,7 +20,6 @@ const startChangingColor = function(){
   }
   
   // randomBgColor = setInterval(changeBgColor, 1000)
-
   if(!randomBgColor){
     randomBgColor = setInterval(changeBgColor, 1000)
   }
