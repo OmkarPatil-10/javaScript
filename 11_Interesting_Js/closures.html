@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body style="background-color: black;">
+    <button id="orange">Orange</button>
+    <button id="green">green</button>
+</body>
+<script>
+    // Lexical Scoping >> Inner function have access to the variable of outer function[Parent function]
+
+    function outer(){
+        const username = "Omkar"
+        function inner(){
+            let secret = 'My123'
+            console.log("INNER",username);  //>> here we can "access" the outer function variable
+        }
+        function innerTwo(){
+            console.log("InnerTwo", username);
+            // console.log(secret); // child function dont have access to other child function variable 
+        }
+        inner();
+        innerTwo();
+        // console.log(secret); // > Here parent function dont have access to child function variable 
+    }
+    outer();
+    // console.log("TOO OUTER",username); //>> here we "cant access" the outer function value 
+    
+
+    // Closure >> in this; if inner function is called then.. in the execution context it passes its outer func (Lexical scope) if any...
+
+    function makeFunc(){
+        const name = "Brave";
+        function displayName(){
+            console.log(name);
+        }
+        return displayName;
+    }
+
+    // console.log(makeFunc())
+
+    const myFunc = makeFunc();
+    myFunc(); 
+
+</script>
+<Script>
+    // document.getElementById("orange").onclick = function(){
+    //     document.body.style.backgroundColor = `orange`
+    // }
+    // document.getElementById("green").onclick = function(){
+    //     document.body.style.backgroundColor = `green`
+    // }
+
+
+    function clickHandler(color){
+        // document.body.style.backgroundColor = `${color}`
+        return function () {
+            document.body.style.backgroundColor = `${color}`
+        }
+    }
+    
+    document.getElementById('orange').onclick =  clickHandler('orange')
+
+    document.getElementById('green').onclick =  clickHandler('green')
+</Script>
+</html>
